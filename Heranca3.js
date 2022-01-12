@@ -1,65 +1,39 @@
-class Animal{
-  
-  constructor(mCor,mPeso,mTamanho){
-    this.cor = mCor
-    this.peso = mPeso
-    this.tamanho = mTamanho
-  }
-  
-  correr(){
-    console.log("correr")
-    console.log("como")
-    console.log("um")
-  }
-  
-  dormir(){
-    return "dormir"
-  }
+/*
 
-}
+let nome = "notebook"
+let preco = 1200
 
-class Cao extends Animal{
-    
-  constructor(mCor,mPeso,mTamanho,mOrelha){
-    super(mCor,mPeso,mTamanho)
-    this.tamanhoOrelha = mOrelha
-  }
-  
-  correr(){
-    super.correr()
-    console.log("cao")
-  }
-  
-  latir(){
-    return "latir"
-  }  
-}
 
-class Passaro extends Animal{
-  
-  constructor(mCor,mPeso,mTamanho,mCantar){
-    super(mCor,mPeso,mTamanho)
-    this.cantar = mCantar
+let produto = {
+  nome,
+  preco,
+  exibirProduto(){
+    console.log(`${this.nome},${this.preco}`)
   }
+} 
+
+produto.nome
+produto.preco
+
+*/
+
+
+class Produto{
   
-  correr(){
-    super.correr()
-    console.log("passaro")
+  constructor(){  
+  this.nome = "Notebook"
+  this.preco = 1200
   }
-    
-  voar(){
-    return "voar"
+  exibirProduto(){
+    console.log(`${this.nome},${this.preco}`)
   }
 }
 
- // const animal = new Animal("Amarelo",60,3)
-// console.log(animal.cor)
+const produto = new Produto()
 
-const cao = new Cao("Verde",50,30,5)
+const pro = produto
 
-console.log(cao.tamanho)
-
-
-const passaro = new Passaro("Azul",10,30,true)
-
-passaro.cantar
+pro.preco = 2000
+produto.preco = 3000
+console.log(produto.preco)
+console.log(pro.preco)
